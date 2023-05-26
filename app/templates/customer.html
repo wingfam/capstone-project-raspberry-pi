@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Resident: {{ resident.phone }}</h1>
+    <hr>
+    {% for booking in bookings %}
+    <p>
+        {{ booking.resident.phone }} says: <b>{{ booking.booking_valid_date }}</b>
+    </p>
+    {% endfor %}
+{% endblock %}
