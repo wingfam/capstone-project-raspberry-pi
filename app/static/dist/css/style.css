@@ -1,0 +1,126 @@
+@media (max-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn-sq-responsive {
+  width: 50% !important;
+  height: 20% !important;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 10%;
+  margin: 3%;
+}
+
+.img-sq-btn {
+  height: 65%;
+  width: 65%;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.box-text {
+  font-size: xxx-large;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: burlywood;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Draw animated checkmark */
+svg {
+  width: 100px;
+  display: block;
+  margin: 40px auto 0;
+}
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+.path.circle {
+  -webkit-animation: dash 0.9s ease-in-out;
+  animation: dash 0.9s ease-in-out;
+}
+.path.line {
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+  animation: dash 0.9s 0.35s ease-in-out forwards;
+}
+.path.check {
+  stroke-dashoffset: -100;
+  -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+  animation: dash-check 0.9s 0.35s ease-in-out forwards;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+p.success {
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+  text-align: center;
+  color: #73af55;
+}
+
+p.error {
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+  text-align: center;
+  color: #d06079;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+ }
+  100% {
+    stroke-dashoffset: 0;
+ }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+ }
+  100% {
+    stroke-dashoffset: 0;
+ }
+}
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+ }
+  100% {
+    stroke-dashoffset: 900;
+ }
+}
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+ }
+  100% {
+    stroke-dashoffset: 900;
+ }
+}

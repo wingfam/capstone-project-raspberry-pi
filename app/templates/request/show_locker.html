@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<div style="margin-top: 10%;">
+    <div class="col-sm-6">
+        <div class="grid-container">
+            {% for locker in lockers %}
+            {% if locker.locker_name == booked_locker_name %}
+            <div class="grid-item" style="background-color: aqua;">
+                <p class="box-text">
+                    <strong>{{ locker.locker_name }}</strong>
+                </p>
+            </div>
+            {% else %}
+            <div class="grid-item">
+                <p class="box-text">
+                    <strong>{{ locker.locker_name }}</strong>
+                </p>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="row">
+            <p style="margin: 0 0 10px;">
+                <strong>Hướng dẫn: </strong>Xin hãy để hàng vào tủ hiện trên màn hình.
+                Sau khi đã bỏ hàng vào tủ, vui lòng đóng kín cửa tủ.
+            </p>
+            <p><strong>Chú ý: </strong>ban quản lí sẽ không chịu trách nhiệm cho những trường hợp: <br>
+                - Cố ý bỏ hàng cấm, chất cháy nổ vào tủ.<br>
+                - Cố ý cạy, phá hoặc làm hỏng tủ.<br>
+            </p>
+        </div>
+        <div class="row text-center">
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.booking_id(value=booking_id, type='hidden') }}
+                {{ form.booking_code(value=booking_code, type='hidden') }}
+                {{ form.locker_name(value=booked_locker_name, type='hidden') }}
+                {{ form.submit(class='btn btn-primary btn-lg col-xs-12') }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
