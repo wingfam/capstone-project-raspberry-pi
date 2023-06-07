@@ -1,4 +1,4 @@
-#!D:\Projects\Flask\SmartLocker\venv\Scripts\python.exe
+#!D:\GitHub\capstone-project-raspberry-pi\venv\Scripts\python.exe
 # -*- coding: utf-8 -*-
 # Copyright 2022 Google LLC
 #
