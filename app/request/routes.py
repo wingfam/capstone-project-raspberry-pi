@@ -24,6 +24,7 @@ def delivery():
             fb_booking_code = firebaseDB.child("booking_code").order_by_child(
                 "bcode_name").equal_to(form.bcode.data).get(smart_locker["idToken"])
             items = list(fb_booking_code.val().items())
+            
             valid_datetime = datetime.strptime(items[0][1].get(
                 "bcode_valid_datetime"), "%Y-%m-%d %H:%M:%S")
 
@@ -66,7 +67,6 @@ def delivery():
             return redirect(next_page)
 
     return render_template("request/delivery.html", title="Delivery", form=form)
-
 
 @bp.route("/pickup", methods=["GET", "POST"])
 def pickup():

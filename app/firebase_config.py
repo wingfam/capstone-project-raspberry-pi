@@ -21,5 +21,5 @@ firebaseDB = firebaseApp.database()
 # Identification
 identity = {
     "email": "supmangcua970@gmail.com",
-    "password": "123456"
+    "password": "123456789"
 }
