@@ -46,9 +46,6 @@ protobuf==4.23.3
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
 pycparser==2.21
-PyQt6==6.5.0
-PyQt6-Qt6==6.5.0
-PyQt6-sip==13.5.1
 python-dotenv==1.0.0
 python-jwt==4.0.0
 requests==2.31.0
